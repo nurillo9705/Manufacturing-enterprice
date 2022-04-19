@@ -18,7 +18,6 @@ return new class extends Migration
             $table->unsignedBigInteger('material_id');
             $table->integer('remainder')->default(0);
             $table->float('price')->default(0);
-            $table->tinyInteger('status')->default(1);
             $table->timestamps();
             $table->foreign("material_id")->references("id")->on("materials");
         });
